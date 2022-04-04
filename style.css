@@ -1,6 +1,6 @@
 html {
   margin: 0;
-  background-color:blue; 
+  background-color:white; 
 }
 body {
   
@@ -12,6 +12,7 @@ body {
 }
 
 a:link {
+margins-bottom:20px;
 margin :20px;
   color: black;
 }
@@ -25,7 +26,8 @@ margin :20px;
 /* mouse over link */
 a:hover {
 margin :20px;
-  color: hotpink;
+  color: grey;
+Background-color:brown;
 }
 
 /* selected link */
