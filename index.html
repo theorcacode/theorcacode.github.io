@@ -24,92 +24,13 @@
       
   </ul>
     
-    <p>
-  Discover what fart you are! Simply enter the first letter of your name and the day of the month you were born! Ex: A 18
-</p>
-
-<input type="text" id="stdin"/>
-<p id="credits"></p>
-<form id="form">
-  <button id="run">Run</button>
-</form>
-<code id="output"></code>
-
-<script>
-var run = document.getElementById("run");
-
-run.addEventListener("click", function (e) {
-  
-  e.preventDefault();
-  
-  var stdin = document.getElementById("stdin");
-  var form = document.getElementById("form");
-  var credits = document.getElementById("credits");
-  var output = document.getElementById("output");
-  
-  output.innerHTML = "Loading...";
-  
-  console.log(stdin.value);
-  
-  var obj = {};
-  obj["clientId"] = "94647c224da1b906e60b94aa3910b714";
-  obj["clientSecret"] = "4b6817eab360d79f483aabdfaa1b847665fb64a7fd2d3740e99e3406016e8e7";
-  obj["script"] = "import java.util.HashMap;\r\nimport java.util.Scanner;\r\n\r\npublic class Farts {\r\n\r\n\tpublic static void main(String[] args) {\r\n\t\t\r\n\t\t\r\n\t\t\r\n\t\tScanner scan = new Scanner(System.in);\r\n\t\t\r\n\t\tString letter = scan.next().toUpperCase();\r\n\t\tint day = scan.nextInt();\r\n\t\t\r\n\t\tHashMap<String, String> letters = new HashMap<String, String>();\r\n\t\tletters.put(\"A\", \"WRETCHED\");\r\n\t\tletters.put(\"B\", \"DEEPLY\");\r\n\t\tletters.put(\"C\", \"PHENOMENAL\");\r\n\t\tletters.put(\"D\", \"GROSSLY\");\r\n\t\tletters.put(\"E\", \"MONUMENTAL\");\r\n\t\tletters.put(\"F\", \"EXPLOSIVE\");\r\n\t\tletters.put(\"G\", \"UNEXPECTEDLY\");\r\n\t\tletters.put(\"H\", \"THICK\");\r\n\t\tletters.put(\"I\", \"TINY\");\r\n\t\tletters.put(\"J\", \"LONG\");\r\n\t\tletters.put(\"K\", \"GIGANTIC\");\r\n\t\tletters.put(\"L\", \"TREMENDOUS\");\r\n\t\tletters.put(\"M\", \"DANGEROUSLY\");\r\n\t\tletters.put(\"N\", \"CRAZY\");\r\n\t\tletters.put(\"O\", \"SCRAWNY\");\r\n\t\tletters.put(\"P\", \"BEAUTIFLY\");\r\n\t\tletters.put(\"Q\", \"ROTTENLY\");\r\n\t\tletters.put(\"R\", \"SPOOKY\");\r\n\t\tletters.put(\"S\", \"LUMPY\");\r\n\t\tletters.put(\"T\", \"MODERATELY\");\r\n\t\tletters.put(\"U\", \"HAPPY\");\r\n\t\tletters.put(\"V\", \"TROUBLESOME\");\r\n\t\tletters.put(\"W\", \"SAGGY\");\r\n\t\tletters.put(\"X\", \"HEARTY\");\r\n\t\tletters.put(\"Y\", \"BIG\");\r\n\t\tletters.put(\"Z\", \"LUXURIOUS\");\r\n\t\t\r\n\t\tHashMap<Integer, String> days = new HashMap<Integer, String>();\r\n\t\tdays.put(1, \"SOUR\");\r\n\t\tdays.put(2, \"GREAT\");\r\n\t\tdays.put(3, \"OLD\");\r\n\t\tdays.put(4, \"LOUD\");\r\n\t\tdays.put(5, \"LITTLE\");\r\n\t\tdays.put(6, \"EPIC\");\r\n\t\tdays.put(7, \"WET\");\r\n\t\tdays.put(8, \"DANK\");\r\n\t\tdays.put(9, \"FAKE\");\r\n\t\tdays.put(10, \"SENILE\");\r\n\t\tdays.put(11, \"MUSTY\");\r\n\t\tdays.put(12, \"SHARP\");\r\n\t\tdays.put(13, \"DANGEROUS\");\r\n\t\tdays.put(14, \"MONOTONE\");\r\n\t\tdays.put(15, \"SQUEAKY\");\r\n\t\tdays.put(16, \"NOISELESS\");\r\n\t\tdays.put(17, \"ROTTEN\");\r\n\t\tdays.put(18, \"FAT\");\r\n\t\tdays.put(19, \"SOFT\");\r\n\t\tdays.put(20, \"POTENT\");\r\n\t\tdays.put(21, \"SUDDEN\");\r\n\t\tdays.put(22, \"POWERFUL\");\r\n\t\tdays.put(23, \"STRANGE\");\r\n\t\tdays.put(24, \"STURDY\");\r\n\t\tdays.put(25, \"FLAT\");\r\n\t\tdays.put(26, \"FULL\");\r\n\t\tdays.put(27, \"WINDY\");\r\n\t\tdays.put(28, \"HORRID\");\r\n\t\tdays.put(29, \"BEAUTIFUL\");\r\n\t\tdays.put(30, \"HOT\");\r\n\t\tdays.put(31, \"SILENT\");\r\n\t\t\r\n\t\tSystem.out.println(\"You are a \" + letters.get(letter) + \" \"\r\n\t\t\t\t+ days.get(day) + \" FART\");\r\n\t}\r\n\r\n}";
-  obj["language"] = "java";
-  obj["versionIndex"] = "0";
-  obj["stdin"] = stdin.value;
-  var jsonStr = JSON.stringify(obj);
-  
-  console.log(jsonStr);
-  
-  const proxyurl = "https://cors-anywhere.herokuapp.com/";
-  const url = "https://api.jdoodle.com/v1/execute";
-  fetch(proxyurl + url, {
-    method: 'post',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: jsonStr
-  })
-  .then(response => {
-    return response.json()
-  })
-  .then(data => {
-    console.log(data);
-    var outputStr = data.output;
-    console.log(outputStr);
-    var formattedOutput = outputStr.replace(/(?:\r\n|\r|\n)/g, '<br>');
-    output.innerHTML = formattedOutput;
-  })
-  .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
-  
-  const creditsUrl = "https://api.jdoodle.com/v1/credit-spent";
-  fetch(proxyurl + creditsUrl, {
-    method: 'post',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: jsonStr
-  })
-  .then(response => {
-    return response.json()
-  })
-  .then(data => {
-    console.log(data);
-    var creditsLeft = 200 - data.used;
-    console.log(credits);
-    credits.innerHTML = "Runs left: " + creditsLeft;
-  })
-  .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
-  
-  
-  
-  
-});
-</script>
+    
     <p></time datetime="2022-04-05">April 4 </time> Completed 6 exersises on java classes, getters and setters. here is a link <a href="https://www3.ntu.edu.sg/home/ehchua/programming/java/J3f_OOPExercises.html#zz-1.1">1.1  An Introduction to Classes and Instances by Example - The Circle Class</a>
+<p>HOMEWORK (do 7 april)</p>
+<a href="http://www.inf.ed.ac.uk/teaching/courses/inf1/op/Labs/2008/doc/lab3_with_solutions.html#exercises">Encapsulation</a>
+<a href ="http://www.sarmaroof.com/java-abstract-classes/">abstract class</a>
+<a href ="https://www.javaguides.net/2018/08/coupling-in-java-with-example.html">Coupling</a>
+    
 <a href="https://online.flippingbook.com/view/911812723/" class="fbo-embed" data-fbo-id="911812723" data-fbo-ratio="16:9" data-fbo-lightbox="yes" data-fbo-width="100%" data-fbo-height="auto" data-fbo-version="1" style="max-width: 100%">Pro Web Project Management</a><script async defer src="https://online.flippingbook.com/EmbedScriptUrl.aspx?m=redir&hid=911812723"></script>
 <!-- Bothelp.io widget -->
 <script type="text/javascript">!function(){var e={"buttons":[{"type":"telegram","token":"Zhaniya08"},{"type":"instagram","token":"janemay3341"},{"type":"whatsapp","token":"77019223828"},{"type":"email","token":"zmeyramova@gmail.com"}],"color":"#9E30C4","position":"right","bottomSpacing":"0","callToActionMessage":"ask me a question","displayOn":"everywhere","lang":"en"},t=document.location.protocol+"//bothelp.io",o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=t+"/widget-folder/widget-page.js",o.onload=function(){new BhWidgetPage.init(e)};var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(o,n)}();</script>
