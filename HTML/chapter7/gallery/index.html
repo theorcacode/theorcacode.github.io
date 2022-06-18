@@ -36,10 +36,19 @@
 
     <h2>Our Baked Goods</h2>
     <p>
-      <a href="bread.html"
-        ><img
-          src="thumbnails/bread-200.jpg"
-          alt="close-up of sliced rustic bread" /></a
+      <a href="bread.html">
+        <picture>
+          <source
+            media="(min-width: 480px)"
+            srcset="
+              /HTML/chapter7/gallery/responsivegallery/images/bread-1200.jpg
+            "
+          />
+          <img
+            src="thumbnails/bread-200.jpg"
+            alt="close-up of sliced rustic bread"
+          />
+        </picture> </a
       ><br />
       We start our day at the crack of dawn to bake our own muffins, bread, and
       dinner rolls. Loaves not used that day are donated to the local food
