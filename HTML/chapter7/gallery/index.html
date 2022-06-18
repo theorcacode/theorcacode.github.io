@@ -24,6 +24,9 @@
         color: #d1633c;
         font-size: 1em;
       }
+      img {
+        max-width: 100%;
+      }
     </style>
   </head>
 
@@ -40,19 +43,31 @@
       <a href="bread.html">
         <picture>
           <source
-            media="(min-width: 480px)"
+            media="(min-width: 1024px"
             srcset="
-              /HTML/chapter7/gallery/responsivegallery/images/bread-1200.jpg 1200w,
-              /HTML/chapter7/gallery/responsivegallery/images/bread-800.jpg   800w
+              /HTML/chapter7/gallery/responsivegallery/images/bread-400.jpg
             "
-            sizes="80vw"
+          />
+          <source
+            media="(min-width: 760px )"
+            srcset="
+              /HTML/chapter7/gallery/responsivegallery/images/bread-800.jpg
+            "
+          />
+          <source
+            media="(min-width: 480px )"
+            srcset="
+              /HTML/chapter7/gallery/responsivegallery/images/bread-400.jpg
+            "
           />
           <img
             src="/HTML/chapter7/gallery/responsivegallery/images/bread-400.jpg"
-            alt="close-up of sliced rustic bread"
+            alt=""
           />
-        </picture> </a
-      ><br />
+        </picture>
+      </a>
+
+      <br />
       We start our day at the crack of dawn to bake our own muffins, bread, and
       dinner rolls. Loaves not used that day are donated to the local food
       shelter.
@@ -60,9 +75,33 @@
 
     <h2>Our Burgers</h2>
     <p>
-      <a href="burgers.html"
-        ><img src="../gallery/thumbnails/burgers-200.jpg" alt="burger"
-      /></a>
+      <a href="burgers.html">
+        <picture>
+          <source
+            media="(min-width: 1024px"
+            srcset="
+              /HTML/chapter7/gallery/responsivegallery/images/burgers-400.jpg
+            "
+          />
+          <source
+            media="(min-width: 760px )"
+            srcset="
+              /HTML/chapter7/gallery/responsivegallery/images/burgers-800.jpg
+            "
+          />
+          <source
+            media="(min-width: 480px )"
+            srcset="
+              /HTML/chapter7/gallery/responsivegallery/images/burgers-400.jpg
+            "
+          />
+          <img
+            src="/HTML/chapter7/gallery/responsivegallery/images/burgers-400.jpg"
+            alt=""
+          />
+        </picture>
+      </a>
+
       <br />
 
       People come from all over to enjoy our lovingly made burgers. We grind our
@@ -73,43 +112,37 @@
 
     <h2>Catch of the Day</h2>
     <p>
-      <a href="fish.html"
-        ><img src="../gallery/thumbnails/fish-200.jpg" alt="fish" /></a
-      ><br />
+      <a href="fish.html">
+        <picture>
+          <source
+            media="(min-width: 1024px"
+            srcset="
+              /HTML/chapter7/gallery/responsivegallery/images/fish-400.jpg
+            "
+          />
+          <source
+            media="(min-width: 760px )"
+            srcset="
+              /HTML/chapter7/gallery/responsivegallery/images/fish-800.jpg
+            "
+          />
+          <source
+            media="(min-width: 480px )"
+            srcset="
+              /HTML/chapter7/gallery/responsivegallery/images/fish-400.jpg
+            "
+          />
+          <img
+            src="/HTML/chapter7/gallery/responsivegallery/images/fish-400.jpg"
+            alt=""
+          />
+        </picture>
+      </a>
 
+      <br />
       Our chef works with local fisherman to pick the freshest the sea has to
       offer for our daily seafood special. Our Roast Cod Caponata with Roasted
       Potatoes is an old favorite with our regulars.
-    </p>
-
-    <h2>Fried Chicken Legs</h2>
-    <p>
-      <a href="../gallery/chicken.html">
-        <img
-          src="../gallery/thumbnails/chicken-200.jpg"
-          alt="fried chicken"
-        /> </a
-      ><br />
-      Daring chicken legs fired to the brown color of caramel. Lads who made
-      them love making people smile. You know.
-    </p>
-
-    <h2>Fries for the fish</h2>
-    <p>
-      <a href="../gallery/fries.html"
-        ><img src="../gallery/thumbnails/fries-200.jpg" alt="catch of the day"
-      /></a>
-      <br />
-      Who doesn't like fries that often come with a burger and a cup of cold
-      coke. People at our restraunt always get at least one plate of these yummy
-      things.
-    </p>
-    <h2>Tabouleh of the day</h2>
-    <p>
-      <a href="../gallery/tabouleh.html"
-        ><img src="../gallery/thumbnails/tabouleh-200.jpg" alt="tabouleh" /></a
-      ><br />This a dish of my childhood. My mamma would often make us help her
-      with the dishes while she was making tabouleh.
     </p>
   </body>
 </html>
